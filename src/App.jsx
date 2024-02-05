@@ -1,5 +1,7 @@
-import {useFormik} from 'formik'
-import * as YUP from 'yup'
+import {useFormik} from 'formik';
+import * as YUP from 'yup';
+import './App.css';
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
 
 function App() 
 {
@@ -36,33 +38,38 @@ function App()
     
   return (
     <div>
+    <div class="cc">
     <form onSubmit={formik.handleSubmit}>
-      <label>Username:</label>
+      <label >Username:<i class='bx bxs-user'></i></label><br></br>
       <input type="text" name="username" placeholder="Enter UserName"
       onChange={formik.handleChange}
-      value={formik.values.username}    
+      value={formik.values.username}
+     
       />
-      {formik.errors.username && <p style={{color:'red'}}>{formik.errors.username}</p>}
+       {formik.errors.username && <p style={{color:'red'}}>{formik.errors.username}</p>}   
+     
 
 
-      <br/>
-      <label>Email Id:</label>
+      <br/><br/>
+      <label for="fname">Email Id:<i class='bx bx-envelope'></i></label><br></br>
       <input type="email" name="email" placeholder="Enter EmailId"
       onChange={formik.handleChange}
       value={formik.values.email}
       
       />
       {formik.errors.email && <p style={{color:'red'}}>{formik.errors.email}</p>}
-      <br/>
-      <label>Password:</label>
+      <br/><br/>
+      <label for="fname">Password:</label><br></br>
       <input type="password" name="password" placeholder="Enter Password"
      onChange={formik.handleChange}
      value={formik.values.password}
       />
       {formik.errors.password && <p style={{color:'red'}}>{formik.errors.password}</p>}
-      <br/>
-      <input type="submit"/>
+      <br/><br/>
+      <input type="submit" class="btn"/>
+     
     </form>
+    </div>
     </div>
   );
 }

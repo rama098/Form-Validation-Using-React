@@ -1,0 +1,29 @@
+
+body{
+    background-color:black;
+    background-image: url("/public/img.jpg");
+    background-position: cover;
+    
+}
+.cc{
+  
+   font-size: larger;
+   font-style: italic;
+  
+    text-align: center;
+   
+  
+    border-radius: 150px;
+  
+   
+}
+.btn{
+    cursor: pointer;
+    padding: 14px;
+   border-radius: 15px;
+}
+.btn:hover{
+    background-color:green;
+    color:aliceblue;
+  
+}
